@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade das Mensagens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Atividade das Mensagens</h1>
+  <button onclick="mostrarMensagem(1)">Botão 1</button>
+  <button onclick="mostrarMensagem(2)">Botão 2</button>
+  <button onclick="mostrarMensagem(3)">Botão 3</button>
+
+  <script>
+    function mostrarMensagem(numero) {
+      alert(`Você clicou no ${numero}º botão!`);
+    }
+  </script>
+</body>
+</html>
