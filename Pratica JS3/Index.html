@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Atividades JavaScript</title>
+</head>
+<body>
+
+  <div id="saudacao"></div>
+
+  <button id="botaoClique">Clique aqui</button>
+  <div id="contadorTexto">O botão já foi clicado 0 vezes.</div>
+
+  <div id="verificacaoIdade"></div>
+
+  <script>
+ 
+    let nomeUsuario = prompt("Qual é o seu nome?");
+    let saudacao = document.getElementById("saudacao");
+    saudacao.textContent = "Olá, " + nomeUsuario + "! É um prazer ter você aqui.";
+
+ 
+    let contador = 0;
+    let botao = document.getElementById("botaoClique");
+    let textoContador = document.getElementById("contadorTexto");
+
+    botao.onclick = function() {
+      contador++;
+      textoContador.textContent = "O botão já foi clicado " + contador + " vezes.";
+    };
+    
+    let idade = prompt("Digite sua idade:");
+    idade = Number(idade); // converte pra número
+
+    let resultadoIdade = document.getElementById("verificacaoIdade");
+    if (idade >= 18) {
+      resultadoIdade.textContent = "Você é maior de idade.";
+    } else {
+      resultadoIdade.textContent = "Você não é maior de idade.";
+    }
+  </script>
+
+</body>
+</html>
