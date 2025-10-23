@@ -1,0 +1,113 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo com gradiente suave */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Animação de fundo flutuante */
+body::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15), transparent 60%),
+              radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1), transparent 60%);
+  animation: float 6s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  from { transform: scale(1) translateY(0); }
+  to { transform: scale(1.05) translateY(-10px); }
+}
+
+/* Caixa de login */
+.container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  width: 350px;
+  text-align: center;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Título */
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Campos de formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #e5e5e5;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+/* Botão */
+button {
+  background: linear-gradient(135deg, #00c6ff, #007bff);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #0096ff, #0040ff);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
